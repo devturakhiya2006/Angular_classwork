@@ -1,0 +1,66 @@
+<!-- <p>directive works!</p> -->
+<div>
+    <div class="row">
+        <div class="col-3">
+            @if(isCourseStart){
+            <span>
+                <h3 style="background-color: blue;"> Yes .. Course started</h3>
+            </span>
+            }@else{
+            <span>
+                <h3 style="background-color: blueviolet;">No.. It's not started</h3>
+            </span>
+            }
+        </div>
+    </div>
+</div>
+<button class="btn btn-primary" (click)="toggleState()">
+    Click
+</button>
+
+<div class="div">
+    <div class="row">
+        <div class="col-3">
+            @for(stu of studentList;track $index){
+            <ul>{{stu}}</ul>
+            }
+        </div>
+    </div>
+</div>
+
+<h2>Emp List</h2>
+<table border="1" cellpadding="10">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+    @for (emp of Employee; track $index) {
+    <tr>
+        <td>{{ emp.id }}</td>
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.email }}</td>
+        <td>
+            @if (emp.city === 'New York') {
+                <span class="badge bg-primary">{{ emp.city }}</span>
+            }
+            @else if (emp.city === 'London') {
+                <span class="badge bg-success">{{ emp.city }}</span>
+            }
+            @else if (emp.city === 'Paris') {
+                <span class="badge bg-danger">{{ emp.city }}</span>
+            }
+            @else if (emp.city === 'Tokyo') {
+                <span class="badge bg-warning text-dark">{{ emp.city }}</span>
+            }
+            @else {
+                <span class="badge bg-info text-dark">{{ emp.city }}</span>
+            }
+        </td>
+    </tr>
+    }
+</tbody>

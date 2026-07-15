@@ -40,7 +40,6 @@ clearData(){
   this.calResult=0
 }
 }
-
 // num1: number = 0;
 //   num2: number = 0;
 //   result: number | string = 0;
