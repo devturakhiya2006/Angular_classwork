@@ -1,0 +1,21 @@
+<p>pipe works!</p>
+<div class="row">
+    <div class="col-3" class="p-2">
+        Before:{{courseTitle}} <br />
+        After:{{courseTitle | uppercase}}
+        //After:{{courseTitle | titlecase}}
+        // After:{{courseTitle | lowercase}}
+    </div>
+    <div class="col-10" class="p-2">
+        Before:{{today}}<br>
+        After{{today|date}}
+    </div>
+    <div class="col-3" class="p-2">
+        Before:{{empList}}<br>
+        After{{empList|json}}
+    </div>
+    <div class="col-3" class="p-2">
+        Before:{{salary}}<br>
+        After:{{salary|currency:'₹'}}
+    </div>
+</div>

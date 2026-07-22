@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-directive',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink,CommonModule],
   templateUrl: './directive.component.html',
   styleUrl: './directive.component.css'
 })
@@ -18,6 +19,10 @@ export class DirectiveComponent {
     'Raj',
     'Vraj'
   ]
+  attributeval1:string=''
+  attributeval2:string=''
+  attributeval3:string=''
+  attributeval4:string=''
 
   Employee = [
   { id: 1, name: 'John Doe', email: 'john@example.com', city: 'New York', department: 'IT' },
@@ -31,8 +36,23 @@ export class DirectiveComponent {
   { id: 9, name: 'William Scott', email: 'william@example.com', city: 'Tokyo', department: 'Marketing' },
   { id: 10, name: 'Ava Harris', email: 'ava@example.com', city: 'Sydney', department: 'Sales' }
 ];
-  
   toggleState(){
     this.isCourseStart=!this.isCourseStart
   }
+   changeToSuccess() {
+    this.attributeval1 =
+      this.attributeval1 === 'bg-success' ? '' : 'bg-success';
+  }
+  changeToPrimary() {
+    this.attributeval2 =
+      this.attributeval2 === 'bg-primary' ? '' : 'bg-primary';
+  }
+  changeToWarning() {
+    this.attributeval3 =
+      this.attributeval3 === 'bg-warning' ? '' : 'bg-warning';
+  }
+  changeToDanger() {
+    this.attributeval4 =
+      this.attributeval4 === 'bg-danger' ? '' : 'bg-danger'
+}
 }

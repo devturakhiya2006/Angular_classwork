@@ -64,3 +64,23 @@
     </tr>
     }
 </tbody>
+
+<div class="row">
+    <div class="col3" [ngClass]="attributeval1">div-1</div>
+  </div>
+
+  <div class="row">
+      <div class="col3" [ngClass]="attributeval2">div-2</div>
+  </div>
+
+  <div class="row">
+      <div class="col3" [ngClass]="attributeval3">div-3</div>
+  </div>
+
+  <div class="row">
+      <div class="col3" [ngClass]="attributeval4">div-4</div>
+  </div>
+  <button class="btn btn-success" (click)="changeToSuccess()">success</button>
+  <button class="btn btn-primary" (click)="changeToPrimary()">primary</button>
+  <button class="btn btn-warning" (click)="changeToWarning()">Warning</button>
+  <button class="btn btn-danger" (click)="changeToDanger()">Danger</button>
