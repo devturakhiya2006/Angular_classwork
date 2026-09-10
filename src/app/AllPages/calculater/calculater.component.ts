@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { CounterService } from '../../services/counter.service';
 
 @Component({
   selector: 'app-calculater',
@@ -39,6 +40,8 @@ clearData(){
   this.SecondNum=''
   this.calResult=0
 }
+constructor(public cntService: CounterService) {}
+
 }
 // num1: number = 0;
 //   num2: number = 0;

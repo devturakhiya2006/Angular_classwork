@@ -12,10 +12,21 @@
     </div>
     <div class="col-3" class="p-2">
         Before:{{empList}}<br>
-        After{{empList|json}}
+        After{{empList| na | json }}
     </div>
     <div class="col-3" class="p-2">
         Before:{{salary}}<br>
-        After:{{salary|currency:'₹'}}
+        After:{{salary|currency:'INR'}}
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        @for (emp of empList; track $index){
+            {{emp.id}}
+            {{emp.name}}
+            {{emp.dep}}
+            {{emp.salary}}
+            {{emp.city | na}}
+        }
     </div>
 </div>

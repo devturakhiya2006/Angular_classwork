@@ -1,0 +1,14 @@
+<p>auth works!</p>
+<div class="container">
+    <div>
+        <h2>Login</h2>
+        <form #loginForm="ngForm">
+            <input type="text" name="username" [(ngModel)]="username" placeholder="Username" required>
+            <br />
+            <input type="password" name="password" [(ngModel)]="password" placeholder="Password" required>
+            <br />
+            <button type="submit" (click)="login()">Login</button>
+        </form>
+        <p>{{message}}</p>
+    </div>
+</div>

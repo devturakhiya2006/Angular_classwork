@@ -5,10 +5,12 @@ import { EmployeeComponent } from './AllPages/employee/employee.component';
 import { UniversityComponent } from './AllPages/university/university.component';
 import { CalculatorComponent } from './AllPages/calculater/calculater.component';
 import { PipeComponent } from './AllPages/pipe/pipe.component';
+import { LifecycleComponent } from './AllPages/lifecycle/lifecycle.component';
+import { AuthComponent } from './form/auth/auth.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,CourseComponent,EmployeeComponent,UniversityComponent,CalculatorComponent,RouterLink,PipeComponent],
+  imports: [RouterOutlet,CourseComponent,EmployeeComponent,UniversityComponent,CalculatorComponent,RouterLink,PipeComponent,LifecycleComponent,AuthComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
